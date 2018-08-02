@@ -1,5 +1,18 @@
-ldap:
-  url: ldaps://ldap.myatos.net:636/
-  user: uid=es-Lsis_DAS1_auth,ou=functionalaccounts,dc=atosorigin,dc=com
-  pass: 1JAifA!m78F
-  employee_ou: ou=people,dc=atosorigin,dc=com
+spring:
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/entreratos?useSSL=false
+    username: postgres
+    password: 1234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update 
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+  jooq:
+    sql-dialect: org.hibernate.dialect.PostgreSQLDialect
+  thymeleaf:
+    cache: false 
