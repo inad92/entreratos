@@ -76,17 +76,17 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public void addUserFormation(UserRequest userRequest){
+	public UserEntity addUserFormation(UserRequest userRequest) throws Exception{
 		formationEntity = formationRespository.findByIdFormation(userRequest.getIdFormation());
 		userEntity = userRespository.findByUserDAS(userRequest.getUserDAS());
-		userRepository.save(Converter.addFormationEntityToUserEntity(userEntity, formationEntity));
+		return userRepository.save(Converter.addFormationEntityToUserEntity(userEntity, formationEntity));
 	}
 	
 	@Override
-	public void delUserFormation(UserRequest userRequest){
+	public UserEntity delUserFormation(UserRequest userRequest) throws Exception{
 		formationEntity = formationRespository.findByIdFormation(userRequest.getIdFormation());
 		userEntity = userRespository.findByUserDAS(userRequest.getUserDAS());
-		userRepository.save(Converter.deleteFormationEntityToUserEntity(userEntity, formationEntity));
+		return userRepository.save(Converter.deleteFormationEntityToUserEntity(userEntity, formationEntity));
 	}
 	
 

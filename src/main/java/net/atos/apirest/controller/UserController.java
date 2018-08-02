@@ -62,14 +62,14 @@ import net.atos.apirest.service.UserService;
 	
 	@CrossOrigin(origins = "*")
 	@PutMapping("addUserFormation")
-	public void addUserFormation(@Valid @RequestBody final UserRequest userRequest) {
-		userService.addUserFormation(userRequest);
+	public UserEntity addUserFormation(@Valid @RequestBody final UserRequest userRequest) throws Exception{
+		return userService.addUserFormation(userRequest);
 	}
 	
 	@CrossOrigin(origins = "*")
 	@PutMapping("delUserFormation")
-	public void delUserFormation(@Valid @RequestBody final UserRequest userRequest) {
-		userService.delUserFormation(userRequest);
+	public UserEntity delUserFormation(@Valid @RequestBody final UserRequest userRequest) throws Exception{
+		return userService.delUserFormation(userRequest);
 	}
 	
 }
