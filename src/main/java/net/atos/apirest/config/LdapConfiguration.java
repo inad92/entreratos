@@ -1,4 +1,4 @@
-package net.atos.entreratos.config;
+package net.atos.apirest.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

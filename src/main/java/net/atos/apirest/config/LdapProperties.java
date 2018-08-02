@@ -1,4 +1,4 @@
-package net.atos.entreratos.config;
+package net.atos.apirest.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -1,7 +1,7 @@
-package net.atos.entreratos.controllers;
+package net.atos.apirest.controllers;
 
-import net.atos.entreratos.model.LdapUserRequest;
-import net.atos.entreratos.services.LdapService;
+import net.atos.apirest.model.LdapUserRequest;
+import net.atos.apirest.services.LdapService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
