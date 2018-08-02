@@ -1,4 +1,4 @@
-package net.atos.apirest.model;
+package net.atos.apirest.model.request;
 
 import lombok.Data;
 

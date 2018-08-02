@@ -1,7 +1,7 @@
-package net.atos.apirest.services;
+package net.atos.apirest.service;
 
 import net.atos.apirest.config.LdapProperties;
-import net.atos.apirest.model.LdapUserRequest;
+import net.atos.apirest.model.request.LdapUserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.filter.AndFilter;

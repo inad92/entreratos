@@ -1,4 +1,4 @@
-package net.atos.entreratos.security;
+package net.atos.apirest.security;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
