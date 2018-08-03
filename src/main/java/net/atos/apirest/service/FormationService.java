@@ -1,13 +1,9 @@
 package net.atos.apirest.service;
 
-
-
 import java.util.List;
 
 import net.atos.apirest.model.entity.FormationEntity;
 import net.atos.apirest.model.request.FormationRequest;
-
-
 
 public interface FormationService {
 

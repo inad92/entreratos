@@ -5,7 +5,6 @@ import java.util.List;
 import net.atos.apirest.model.entity.UserEntity;
 import net.atos.apirest.model.request.UserRequest;
 
-
 public interface UserService {
 	
 	/**
@@ -40,8 +39,4 @@ public interface UserService {
 	 */
 	public void deleteUser(UserRequest userRequest) throws Exception;
 	
-	public void addUserFormation(UserRequest userRequest);
-	
-	public void delUserFormation(UserRequest userRequest);
-
 }

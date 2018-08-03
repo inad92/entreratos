@@ -1,18 +1,21 @@
 package net.atos.apirest.model.request;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import net.atos.apirest.model.entity.CatalogEntity;
+import javax.validation.constraints.Size;
 
 public class FormationRequest {
-	
+
 	Integer idFormation;
+
 	Date dateFormation;
+
 	Integer hoursPerDay;
+
+	@Size(min = 1, max = 255)
 	String commentsFormation;
+
 	Integer idCatalog;
-	
 
 	public FormationRequest() {
 		super();
@@ -34,8 +37,6 @@ public class FormationRequest {
 		this.dateFormation = dateFormation;
 	}
 
-	
-
 	public Integer getHoursPerDay() {
 		return hoursPerDay;
 	}
@@ -51,7 +52,7 @@ public class FormationRequest {
 	public void setIdCatalog(Integer idCatalog) {
 		this.idCatalog = idCatalog;
 	}
-	
+
 	public String getCommentsFormation() {
 		return commentsFormation;
 	}
@@ -59,5 +60,5 @@ public class FormationRequest {
 	public void setCommentsFormation(String commentsFormation) {
 		this.commentsFormation = commentsFormation;
 	}
-	
+
 }

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.fasterxml.jackson.annotation.JsonView;
 
 import net.atos.apirest.model.entity.UserEntity;
@@ -58,18 +57,6 @@ import net.atos.apirest.service.UserService;
 	@DeleteMapping("users")
 	public void deleteUser(@Valid @RequestBody final UserRequest userRequest) throws Exception {
 		userService.deleteUser(userRequest);
-	}
-	
-	@CrossOrigin(origins = "*")
-	@PutMapping("addUserFormation")
-	public void addUserFormation(@Valid @RequestBody final UserRequest userRequest) {
-		userService.addUserFormation(userRequest);
-	}
-	
-	@CrossOrigin(origins = "*")
-	@PutMapping("delUserFormation")
-	public void delUserFormation(@Valid @RequestBody final UserRequest userRequest) {
-		userService.delUserFormation(userRequest);
 	}
 	
 }
