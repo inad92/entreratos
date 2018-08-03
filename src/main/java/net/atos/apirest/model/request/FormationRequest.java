@@ -5,19 +5,18 @@ import java.util.Date;
 import javax.validation.constraints.Size;
 
 public class FormationRequest {
-	
+
 	Integer idFormation;
-	
+
 	Date dateFormation;
-	
-	@Size(min=1,max=8)
+
 	Integer hoursPerDay;
-	
-	@Size(min=1,max=255)
+
+	@Size(min = 1, max = 255)
 	String commentsFormation;
-	
+
 	Integer idCatalog;
-	
+
 	public FormationRequest() {
 		super();
 	}
@@ -53,7 +52,7 @@ public class FormationRequest {
 	public void setIdCatalog(Integer idCatalog) {
 		this.idCatalog = idCatalog;
 	}
-	
+
 	public String getCommentsFormation() {
 		return commentsFormation;
 	}
@@ -61,5 +60,5 @@ public class FormationRequest {
 	public void setCommentsFormation(String commentsFormation) {
 		this.commentsFormation = commentsFormation;
 	}
-	
+
 }
