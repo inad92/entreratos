@@ -5,11 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import net.atos.apirest.model.converter.Converter;
 import net.atos.apirest.model.entity.UserEntity;
 import net.atos.apirest.model.request.UserRequest;
 import net.atos.apirest.repository.UserRespository;
+import net.atos.apirest.repository.FormationRespository;
+import net.atos.apirest.repository.UserRespository;
 import net.atos.apirest.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {

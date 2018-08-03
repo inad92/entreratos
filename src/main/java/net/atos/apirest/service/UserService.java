@@ -1,9 +1,10 @@
 package net.atos.apirest.service;
 
-import java.util.List;
-
 import net.atos.apirest.model.entity.UserEntity;
 import net.atos.apirest.model.request.UserRequest;
+
+import java.util.List;
+
 
 public interface UserService {
 	
@@ -38,5 +39,5 @@ public interface UserService {
 	 * @throws Exception
 	 */
 	public void deleteUser(UserRequest userRequest) throws Exception;
-	
+
 }

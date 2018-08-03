@@ -1,11 +1,10 @@
 package net.atos.apirest.model.request;
 
-import java.util.ArrayList;
-import java.util.List;
+import net.atos.apirest.model.entity.FormationEntity;
 
 import javax.validation.constraints.Size;
-
-import net.atos.apirest.model.entity.FormationEntity;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserRequest {
 
