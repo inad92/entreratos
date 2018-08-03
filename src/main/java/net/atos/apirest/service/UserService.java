@@ -40,8 +40,5 @@ public interface UserService {
 	 */
 	public void deleteUser(UserRequest userRequest) throws Exception;
 	
-	public UserEntity addUserFormation(UserRequest userRequest) throws Exception;
-	
-	public UserEntity delUserFormation(UserRequest userRequest) throws Exception;
 
 }

@@ -28,12 +28,10 @@ public class FormationServiceImpl implements FormationService {
 	FormationRespository formationRepository;
 	@Autowired
 	CatalogRepository catalogRepository;
-	@Autowired
-	UserRespository userRepository;
+	
 	
 	CatalogEntity idCatalogEntity;
-	
-	UserEntity userEntity;
+
 	
 	@Override
 	public FormationEntity createFormation(FormationRequest formationRequest) throws Exception {

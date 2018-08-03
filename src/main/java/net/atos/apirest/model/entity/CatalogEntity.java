@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 public class CatalogEntity {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="idCatalog")
 
 	Integer idCatalog;

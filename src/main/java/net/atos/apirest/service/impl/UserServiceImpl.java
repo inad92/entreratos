@@ -20,22 +20,14 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	UserRespository userRepository;
-	@Autowired
-	FormationRespository formationRespository;
-	@Autowired 
-	UserRespository userRespository;
 	
-	FormationEntity formationEntity;
-	
-	UserEntity userEntity;
 	
 	@Override
 	public UserEntity createUser(UserRequest userRequest) throws Exception {
 		if (userRepository.existsByUserDAS(userRequest.getUserDAS())) 
 		  	throw new Exception("Existe_Usuario");
 		else 
-			formationEntity = formationRespository.findByIdFormation(userRequest.getIdFormation());
-			return  userRepository.save(Converter.userRequestToUserEntity(userRequest,formationEntity));
+			return  userRepository.save(Converter.userRequestToUserEntity(userRequest));
 	
 	}
 	
@@ -59,7 +51,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserEntity updateUser(UserRequest userRequest) throws Exception {	
 		if(userRepository.existsByUserDAS(userRequest.getUserDAS())) {
-			return userRepository.save(Converter.userRequestToUserEntity(userRequest,formationEntity));
+			return userRepository.save(Converter.userRequestToUserEntity(userRequest));
 		} else {
 			throw new Exception("No_Existe_Usuario");
 		}
@@ -69,27 +61,10 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void deleteUser(UserRequest userRequest) throws Exception {
 		if (userRepository.existsByUserDAS(userRequest.getUserDAS())) {
-			userRepository.delete(Converter.userRequestToUserEntity(userRequest,formationEntity));
+			userRepository.delete(Converter.userRequestToUserEntity(userRequest));
 		} else {
 			throw new Exception("Error: No se puede eliminar un usuario porque no existe");
 		}
 	}
 	
-	@Override
-	public UserEntity addUserFormation(UserRequest userRequest) throws Exception{
-		formationEntity = formationRespository.findByIdFormation(userRequest.getIdFormation());
-		userEntity = userRespository.findByUserDAS(userRequest.getUserDAS());
-		return userRepository.save(Converter.addFormationEntityToUserEntity(userEntity, formationEntity));
-	}
-	
-	@Override
-	public UserEntity delUserFormation(UserRequest userRequest) throws Exception{
-		formationEntity = formationRespository.findByIdFormation(userRequest.getIdFormation());
-		userEntity = userRespository.findByUserDAS(userRequest.getUserDAS());
-		return userRepository.save(Converter.deleteFormationEntityToUserEntity(userEntity, formationEntity));
-	}
-	
-
-	
-
 }
