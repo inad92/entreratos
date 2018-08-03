@@ -16,12 +16,13 @@ import javax.persistence.Table;
 @Table(name="USERS")
 public class UserEntity {
 
-	
 	@Id
 	@Column
 	String userDAS;
+	
 	@Column
 	Integer userRole;
+	
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(name ="formation_user",
 		joinColumns = @JoinColumn(name="user_DAS",referencedColumnName = "userDAS"),
@@ -31,41 +32,30 @@ public class UserEntity {
 	
 	public UserEntity() {
 		super();
-	
 	}
-
 
 	public String getUserDAS() {
 		return userDAS;
 	}
 
-
 	public void setUserDAS(String userDAS) {
 		this.userDAS = userDAS;
 	}
-
 
 	public Integer getUserRole() {
 		return userRole;
 	}
 
-
 	public void setUserRole(Integer userRole) {
 		this.userRole = userRole;
 	}
-
 
 	public List<FormationEntity> getFormationEntities() {
 		return formationEntities;
 	}
 
-
 	public void setFormationEntities(List<FormationEntity> formationEntities) {
 		this.formationEntities = formationEntities;
 	}
-
-
-		
-
 
 }

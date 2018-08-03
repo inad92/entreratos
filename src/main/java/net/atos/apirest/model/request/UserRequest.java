@@ -3,19 +3,20 @@ package net.atos.apirest.model.request;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nullable;
 import javax.validation.constraints.Size;
 
 import net.atos.apirest.model.entity.FormationEntity;
 
 public class UserRequest {
 
-	@Size(min=7, max=7)
+	@Size(min = 7, max = 7)
 	String userDAS;
+
 	Integer userRole;
+
 	List<FormationEntity> formationEntities = new ArrayList<FormationEntity>();
-	
-	//Constructores
+
+	// Constructores
 	public UserRequest() {
 		super();
 	}
@@ -43,5 +44,5 @@ public class UserRequest {
 	public void setFormationEntities(List<FormationEntity> formationEntities) {
 		this.formationEntities = formationEntities;
 	}
-	
+
 }

@@ -1,23 +1,26 @@
 package net.atos.apirest.model.request;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.validation.constraints.Size;
-
-import net.atos.apirest.model.entity.FormationEntity;
 
 public class CatalogRequest {
 	
 	Integer idCatalog;
+	
 	@Size(min=1,max=255)
 	String nameCatalog;
+	
 	@Size(min=1,max=255)
 	String descriptionCatalog;
+	
 	Integer durationCatalog;
+	
 	@Size(min=1,max=255)
 	String plataformCatalog;
+	
+	@Size(min=1,max=255)
 	String contentCatalog;
+	
+	@Size(min=1,max=255)
 	String commentsCatalog;
 	
 	public CatalogRequest() {

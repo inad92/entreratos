@@ -1,6 +1,5 @@
 package net.atos.apirest.service.impl;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +7,8 @@ import org.springframework.stereotype.Service;
 
 import net.atos.apirest.model.converter.Converter;
 import net.atos.apirest.model.entity.CatalogEntity;
-import net.atos.apirest.model.entity.CatalogEntity;
 import net.atos.apirest.model.request.CatalogRequest;
 import net.atos.apirest.repository.CatalogRepository;
-import net.atos.apirest.model.request.CatalogRequest;
 import net.atos.apirest.service.CatalogService;
 
 

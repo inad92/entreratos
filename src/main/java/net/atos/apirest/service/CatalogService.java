@@ -1,18 +1,11 @@
 package net.atos.apirest.service;
 
-
-
 import java.util.List;
 
 import net.atos.apirest.model.entity.CatalogEntity;
-import net.atos.apirest.model.entity.FormationEntity;
 import net.atos.apirest.model.request.CatalogRequest;
-import net.atos.apirest.model.request.FormationRequest;
-
-
 
 public interface CatalogService {
-	
 	
 	public CatalogEntity createCatalog(CatalogRequest catalogRequest) throws Exception;
 	
@@ -22,5 +15,4 @@ public interface CatalogService {
 
 	public List<CatalogEntity> findAll();
 	
-
 }

@@ -1,22 +1,12 @@
 package net.atos.apirest.model.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonView;
-
-
 
 @Entity
 @Table(name="CATALOG")
@@ -25,31 +15,22 @@ public class CatalogEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="idCatalog")
-
 	Integer idCatalog;
 	
 	@Column(name="nameCatalog")
-
 	String nameCatalog;
 	
 	@Column(name="plataformCatalog")
-
 	String plataformCatalog;
 	
 	@Column(name="contentCatalog")
-
 	String contentCatalog;
 	
 	@Column(name="durationCatalog")
-
 	Integer durationCatalog;
 	
 	@Column(name="commentsCatalog")
-	
 	String commentsCatalog;
-	
-	
-
 	
 	public CatalogEntity() {
 		super();
@@ -102,6 +83,5 @@ public class CatalogEntity {
 	public void setCommentsCatalog(String commentsCatalog) {
 		this.commentsCatalog = commentsCatalog;
 	}
-
 
 }

@@ -12,16 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.fasterxml.jackson.annotation.JsonView;
 
 import net.atos.apirest.model.entity.CatalogEntity;
-import net.atos.apirest.model.entity.UserEntity;
 import net.atos.apirest.model.request.CatalogRequest;
-import net.atos.apirest.model.request.UserRequest;
-import net.atos.apirest.model.view.View;
 import net.atos.apirest.service.CatalogService;
-import net.atos.apirest.service.UserService;
 
 @RestController
  class CatalogController {
@@ -56,6 +51,5 @@ import net.atos.apirest.service.UserService;
 	public void deleteCatalog(@Valid @RequestBody final CatalogRequest catalogRequest) throws Exception {
 		catalogService.deleteCatalog(catalogRequest);
 	}
-	
-	
+		
 }

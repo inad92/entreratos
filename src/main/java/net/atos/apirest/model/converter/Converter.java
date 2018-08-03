@@ -1,7 +1,5 @@
 package net.atos.apirest.model.converter;
 
-import java.util.List;
-
 import net.atos.apirest.model.entity.CatalogEntity;
 import net.atos.apirest.model.entity.FormationEntity;
 import net.atos.apirest.model.entity.UserEntity;
@@ -29,7 +27,6 @@ public class Converter {
 		return formationEntity;
 	}
 
-	
 	public static CatalogEntity catalogRequestToCatalogEntity(CatalogRequest catalogRequest) {
 		CatalogEntity catalogEntity = new CatalogEntity();
 		catalogEntity.setIdCatalog(catalogRequest.getIdCatalog());
@@ -41,5 +38,4 @@ public class Converter {
 		return catalogEntity;
 	}
  
-
 }
