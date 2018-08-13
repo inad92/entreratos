@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url:  jdbc:postgresql://dbentreratos2.cvyarzgbne6d.us-east-1.rds.amazonaws.com:5432/dbentreratos2
-    username: postgres
-    password: 12345678
+    url:  jdbc:postgres://ofksahuisrbbjr:1914ab8cf8d1417bf3ca0fb198647311561e60d879f8712f3b3cd8cf84cd0722@ec2-54-247-123-231.eu-west-1.compute.amazonaws.com:5432/d2bi51lug1jjad
+    username: ofksahuisrbbjr
+    password: 1914ab8cf8d1417bf3ca0fb198647311561e60d879f8712f3b3cd8cf84cd0722
   jpa:
     show-sql: true
     hibernate:
@@ -24,3 +24,6 @@ ldap:
   user: uid=es-Lsis_DAS1_auth,ou=functionalaccounts,dc=atosorigin,dc=com
   pass: 1JAifA!m78F
   employee_ou: ou=people,dc=atosorigin,dc=com
+  
+server:
+    port: 5000
