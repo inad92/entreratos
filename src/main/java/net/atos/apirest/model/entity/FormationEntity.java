@@ -12,8 +12,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonView;
 
+import lombok.Data;
 import net.atos.apirest.model.view.View;
 
+@Data
 @Entity
 @Table(name="FORMATION")
 public class FormationEntity {
@@ -21,19 +23,24 @@ public class FormationEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="idFormation")
+	@JsonView(View.Public.class)
 	Integer idFormation;
 	
 	@Column(name="dateFormation")
+	@JsonView(View.Public.class)
 	Date dateFormation;
 	
 	@Column(name="hoursPerDay")
+	@JsonView(View.Public.class)
 	Integer hoursPerDay;
 	
 	@Column(name="commentsFormation")
+	@JsonView(View.Public.class)
 	String commentsFormation;
 	
 	@ManyToOne
 	@JoinColumn(name = "idCatalog", referencedColumnName = "idCatalog")
+	@JsonView(View.Public.class)
 	private CatalogEntity catalogEntity;
 	
 	public FormationEntity() {

@@ -1,5 +1,7 @@
 package net.atos.apirest.model.converter;
 
+import java.util.List;
+
 import net.atos.apirest.model.entity.CatalogEntity;
 import net.atos.apirest.model.entity.FormationEntity;
 import net.atos.apirest.model.entity.UserEntity;
@@ -9,11 +11,11 @@ import net.atos.apirest.model.request.UserRequest;
 
 public class Converter {
 
-	public static UserEntity userRequestToUserEntity(UserRequest userRequest) {
+	public static UserEntity userRequestToUserEntity(UserRequest userRequest, List<FormationEntity> listFormationEntity) {
 		UserEntity userEntity = new UserEntity();
 		userEntity.setUserDAS(userRequest.getUserDAS());
 		userEntity.setUserRole(userRequest.getUserRole());
-		userEntity.setFormationEntities(userRequest.getFormationEntities());
+		userEntity.setFormationEntities(listFormationEntity);
 		return userEntity;
 	}
 

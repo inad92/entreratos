@@ -1,8 +1,14 @@
 package net.atos.apirest.model.request;
 
 import net.atos.apirest.model.entity.FormationEntity;
+import net.atos.apirest.model.view.View;
 
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonView;
+
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +19,7 @@ public class UserRequest {
 
 	Integer userRole;
 
-	List<FormationEntity> formationEntities = new ArrayList<FormationEntity>();
+	List<FormationRequest> formationRequest = new ArrayList<FormationRequest>();
 
 	// Constructores
 	public UserRequest() {
@@ -36,12 +42,12 @@ public class UserRequest {
 		this.userRole = userRole;
 	}
 
-	public List<FormationEntity> getFormationEntities() {
-		return formationEntities;
+	public List<FormationRequest> getFormationRequest() {
+		return formationRequest;
 	}
 
-	public void setFormationEntities(List<FormationEntity> formationEntities) {
-		this.formationEntities = formationEntities;
+	public void setFormationRequest(List<FormationRequest> formationRequest) {
+		this.formationRequest = formationRequest;
 	}
 
 }

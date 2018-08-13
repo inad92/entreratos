@@ -31,24 +31,28 @@ import net.atos.apirest.service.FormationService;
 	
 	@CrossOrigin(origins = "*")
 	@PostMapping("formations")
+	@JsonView(View.Public.class)
 	public FormationEntity createFormation(@Valid @RequestBody final FormationRequest formationRequest) throws Exception {
 		return formationService.createFormation(formationRequest);	 
 	}
 	
 	@CrossOrigin(origins = "*")
 	@GetMapping("formations")
+	@JsonView(View.Public.class)
 	public List <FormationEntity>  findAll(){
 		return formationService.findAll();
 	}
 	
 	@CrossOrigin(origins = "*")
 	@PutMapping("formations")
+	@JsonView(View.Public.class)
 	public FormationEntity updateFormation(@Valid @RequestBody final FormationRequest formationRequest) throws Exception {
 		return formationService.updateFormation(formationRequest);
 	}
 	
 	@CrossOrigin(origins = "*")
 	@DeleteMapping("formations")
+	@JsonView(View.Public.class)
 	public void deleteFormation(@Valid @RequestBody final FormationRequest formationRequest) throws Exception {
 		formationService.deleteFormation(formationRequest);
 	}

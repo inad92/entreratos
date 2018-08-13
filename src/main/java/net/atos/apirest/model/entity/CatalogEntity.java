@@ -8,6 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonView;
 
+import lombok.Data;
+import net.atos.apirest.model.view.View;
+
+@Data
 @Entity
 @Table(name="CATALOG")
 public class CatalogEntity {
@@ -15,21 +19,27 @@ public class CatalogEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="idCatalog")
+	@JsonView(View.Public.class)
 	Integer idCatalog;
 	
 	@Column(name="nameCatalog")
+	@JsonView(View.Public.class)
 	String nameCatalog;
 	
 	@Column(name="plataformCatalog")
+	@JsonView(View.Public.class)
 	String plataformCatalog;
 	
 	@Column(name="contentCatalog")
+	@JsonView(View.Public.class)
 	String contentCatalog;
 	
 	@Column(name="durationCatalog")
+	@JsonView(View.Public.class)
 	Integer durationCatalog;
 	
 	@Column(name="commentsCatalog")
+	@JsonView(View.Public.class)
 	String commentsCatalog;
 	
 	public CatalogEntity() {

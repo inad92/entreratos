@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url:  jdbc:postgresql://localhost:5432/entreratos?useSSL=false
+    url:  jdbc:postgresql://dbentreratos2.cvyarzgbne6d.us-east-1.rds.amazonaws.com:5432/dbentreratos2
     username: postgres
-    password: 1234
+    password: 12345678
   jpa:
     show-sql: true
     hibernate:

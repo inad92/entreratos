@@ -12,22 +12,31 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import lombok.Data;
+import net.atos.apirest.model.view.View;
+
+@Data
 @Entity
 @Table(name="USERS")
 public class UserEntity {
 
 	@Id
 	@Column
-	String userDAS;
+	@JsonView(View.Public.class)
+	private String userDAS;
 	
 	@Column
-	Integer userRole;
+	@JsonView(View.Public.class)
+	private Integer userRole;
 	
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(name ="formation_user",
 		joinColumns = @JoinColumn(name="user_DAS",referencedColumnName = "userDAS"),
 		inverseJoinColumns = @JoinColumn(name="formation_id",
 		referencedColumnName = "idFormation"))
+	@JsonView(View.Public.class)
 	private List<FormationEntity> formationEntities = new ArrayList<FormationEntity>();
 	
 	public UserEntity() {
